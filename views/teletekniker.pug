@@ -1,12 +1,14 @@
 extends layout
 
+include mixins/lib.pug
+
 block content
-  .container-fluid
+  +cf
     .row
       .col-7
         img.img-fluid(src='https://picsum.photos/300/1000', alt='Responsive image')
       .col-5
-  .container-fluid.bg-dark.py-4.hero-text
+  +cf(class='bg-dark py-4 hero-text')
     .row.pl-4
       h1.text-light
         strong Teletekniker

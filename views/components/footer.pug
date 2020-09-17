@@ -1,4 +1,6 @@
+include ../mixins/lib.pug
+
 block footer
-  footer.footer.mt-3.py-3.bg-light
-    .container-fluid.d-flex.flex-row.justify-content-center
+  footer.footer.mt-auto.py-3.bg-light
+    +cf(class='d-flex flex-row justify-content-center')
       span.text-muted HELLO I AM FOOTER

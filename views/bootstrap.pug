@@ -1,5 +1,44 @@
 extends layout
 
+include mixins/lib.pug
+
 block content
-  .container
-    h1 Hello World
+  +cf
+    .row
+      .col-7
+        img.img-fluid(src='https://picsum.photos/300/1000', alt='Responsive image')
+      .col-5
+  +cf(class='bg-dark py-4 hero-text')
+    .row.pl-4
+      h1.text-light
+        strong Teletekniker
+    .row.pl-4
+      h3.text-light – var med och bygg Sveriges bredbandsnät.
+  .container.mt-3
+    .row
+      .col-7
+        p
+          | Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quasi cumque, omnis a sint praesentium fuga.
+          | Cupiditate consequuntur quasi saepe nostrum illo optio, perferendis neque vero dolor sit, dolorem dicta?
+        p(style='color: rgb(0, 0, 156);')
+          strong
+            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi enim
+            | dolor impedit id blanditiis
+            | officia alias
+            | cumque repudiandae ipsam, magni nesciunt! Vel laudantium quo incidunt corrupti veniam. Nemo, eligendi
+            | corrupti.
+        p
+          | Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam exercitationem rerum laborum fugit,
+          | earum, possimus, necessitatibus inventore doloribus mollitia tempora labore quidem deserunt quod velit
+          | corporis in optio nostrum nihil?
+        .card.border-0(style='width: 100%; background-color: rgb(241, 241, 241) !important; border-radius: 15px; margin-left: -20px;')
+          .card-body
+            h5.card-title Vill du gå utbildningen eller veta mer?
+            p.card-text
+              | Some quick example text to build on the card title and make up the bulk of the card's
+              | content.
+        p.mb-0.mt-1
+          | För mer information om utbildningens innehåll kontakta:
+        span Margareta Irhagen, 070–215 18 40, margareta.irhagen@iftac.se
+        span Ellinor Engström, 072–530 20 52, ellinor.engstrom@icteducation.se
+      .col-5(style='background-size: cover; background-position-x: center;')

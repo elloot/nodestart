@@ -1,0 +1,12 @@
+mixin cf()
+  .container-fluid&attributes(attributes)
+    if block
+      block
+    else
+      p No content provided
+
+mixin nav-link(url, name)
+  li.nav-item
+    a.nav-link(href=url)&attributes(attributes)= name
+      if block
+        block

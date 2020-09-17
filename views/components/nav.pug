@@ -1,3 +1,5 @@
+include ../mixins/lib.pug
+
 block nav
   nav.navbar.navbar-expand-lg.navbar-light.bg-light
     a.navbar-brand(href='#') Navbar
@@ -5,11 +7,7 @@ block nav
       span.navbar-toggler-icon
     #navbarNav.collapse.navbar-collapse
       ul.navbar-nav
-        li.nav-item.active
-          a.nav-link(href='/')
-            | Home 
-            span.sr-only (current)
-        li.nav-item
-          a.nav-link(href='/boot') Boot
-        li.nav-item
-          a.nav-link(href='/teletekniker') Teletekniker
+        +nav-link('/', 'Home')(class='active')
+          span.sr-only (current)
+        +nav-link('/boot', 'Boot')
+        +nav-link('/teletekniker', 'Teletekniker')
