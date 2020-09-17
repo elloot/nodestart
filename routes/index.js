@@ -14,4 +14,8 @@ router.get('/boot', (req, res, next) => {
   res.render('bootstrap');
 });
 
+router.get('/teletekniker', (req, res, next) => {
+  res.render('teletekniker');
+});
+
 module.exports = router;
