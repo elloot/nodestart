@@ -18,4 +18,8 @@ router.get('/teletekniker', (req, res, next) => {
   res.render('teletekniker');
 });
 
+router.get('/guess', (req, res, next) => {
+  res.render('guess');
+});
+
 module.exports = router;
