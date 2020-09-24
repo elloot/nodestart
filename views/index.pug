@@ -1,5 +1,9 @@
 extends layout
 
+block head
+  -var title = 'Home'
+  title Webbserverprogrammering - ${title}
+
 block content
   .container
     h1= title

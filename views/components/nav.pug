@@ -1,5 +1,11 @@
 include ../mixins/lib.pug
 
+mixin nav-link(href, name)
+  if name === title
+    a.nav-link.active(href=href)= name
+  else
+    a.nav-link(href=href)= name
+
 block nav
   nav.navbar.navbar-expand-lg.navbar-light.bg-light
     a.navbar-brand(href='#') Navbar
@@ -7,7 +13,7 @@ block nav
       span.navbar-toggler-icon
     #navbarNav.collapse.navbar-collapse
       ul.navbar-nav
-        +nav-link('/', 'Home')(class='active')
+        +nav-link('/', 'Home')
           span.sr-only (current)
         +nav-link('/boot', 'Boot')
         +nav-link('/teletekniker', 'Teletekniker')

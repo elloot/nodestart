@@ -2,6 +2,10 @@ extends layout
 
 include mixins/lib.pug
 
+block head
+  -var title = 'Teletekniker'
+  title Webbserverprogrammering - ${title}
+
 block content
   +cf
     .row
